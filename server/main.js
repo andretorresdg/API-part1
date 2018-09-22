@@ -39,7 +39,6 @@ app.post('/users', (req,res) => {
 		password: req.body.password
 	}
 	const {error, value} = Joi.validate(newUser, schema);
-	console.log(error)
 	if (error === null) {
 		var hash = bcrypt.hashSync(req.body.password);
 		var login = new Login({
