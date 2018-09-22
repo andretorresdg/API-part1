@@ -1,9 +1,9 @@
-# **AndreDevayAPI**
+# **API-part1**
 
-> AndreDevayAPI is a free REST API which is written in JavaScript, using Node.js and Express.js, to connect to MongoDB and implement all CRUD (Create, Read, Update and Delete) operations to manage user accounts.
+> API-part1 is a free REST API which is written in JavaScript, using Node.js and Express.js, to connect to MongoDB and implement all CRUD (Create, Read, Update and Delete) operations to manage user accounts.
 
 
-Feel free to see the source code [here](https://github.com/andretorresdg/AndreDevayAPI) .
+Feel free to see the source code [here](https://github.com/andretorresdg/API-parte1) .
 
 ---
 
@@ -22,11 +22,11 @@ Feel free to see the source code [here](https://github.com/andretorresdg/AndreDe
 ## Initiating
 
 
->1) On GitHub, navigate to the [main page](https://github.com/andretorresdg/AndreDevayAPI) of the repository.
+>1) On GitHub, navigate to the [main page](https://github.com/andretorresdg/API-parte1.git) of the repository.
 
 >2) Clone or download buttonUnder the repository name, click Clone or download.
 
->3) Clone URL buttonIn the Clone with HTTPs section, click  to copy the clone URL for the repository ( [this web URL](https://github.com/andretorresdg/AndreDevayAPI.git) ).
+>3) Clone URL buttonIn the Clone with HTTPs section, click  to copy the clone URL for the repository ( [this web URL](https://github.com/andretorresdg/API-parte1.git) ).
 
 > 4) Open Git Bash and change the current working directory to the location where you want the cloned directory to be made.
 
@@ -55,6 +55,10 @@ And these packages:
 - [Request](https://www.npmjs.com/package/request)
 - [Joi](https://www.npmjs.com/package/joi)
 - [Babbel](https://babeljs.io/docs/en/usage)
+- [EsLint](https://github.com/shareTheVelopment/tv-linter)
+- [Axios](https://www.npmjs.com/package/axios)
+- [JSDoc](https://www.npmjs.com/package/jsdoc)
+- [Supertest](https://www.npmjs.com/package/supertest)
 
 
 > **Tips**
@@ -76,7 +80,7 @@ And these packages:
 
 For example:
 ```shell
-$ cd D:\Users\Admin\Desktop\AndreDevayAPI
+$ cd D:\Users\Admin\Desktop\API-part1
 ```
 
 > Now, install all the packages with the followig command:
@@ -125,12 +129,17 @@ PS.: I highly recommend [Postman](https://www.getpostman.com/)  to use the API.
 
 ### Running the randomUser.js
 
-> The API starts without any type of user. So, if you want that your database initiate with some random users, run the "randomUser.js" once (it will generate 85 random users). 
+> The API starts without any type of user. So, if you want that your database initiate with some random users, run the "randomUser.js" once (it will generate 85 random users).
 
+1) Run the "main.js"
+```shell
+$ node main.js
+```
+2) Open another window of the command prompt, and run this code below:
 ```shell
 $ node randomUser.js
 ```
-PS.: Make sure that the "main.js" is running in another window of the command prompt.
+PS.: Make sure that the "main.js" is running simultaneously.
 
 ---
 

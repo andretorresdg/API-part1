@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../server');
+const app = require('../server/main');
 
 describe('Test the root path', () => {
  test('It should respond the GET method', async () => {

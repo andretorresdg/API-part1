@@ -56,6 +56,7 @@ app.post('/users', (req,res) => {
 			res.status(400).send(e);	
 		}
 	} else {
+		res.send(e)
 		console.log('ERROR! You cannot create a new user like this. Please, retry.')
 	}   	 
 });
@@ -100,13 +101,20 @@ app.get('/users/:id', (req, res) => {
 app.put('/users/:id', (req, res) => {
 	var id = req.params.id;
 	var schema = Joi.object().keys({
-		email: Joi.string().email({ minDomainAtoms: 2 }).required(),
-		first_name: Joi.string().alphanum().required(),
-		last_name:Joi.string().alphanum().required(),
-		personal_phone:Joi.string().required(),
-		password:Joi.string().required()
-	})
-	const {error, value} = Joi.validate(userData, schema);
+		email: Joi.string(),
+		first_name: Joi.string(),
+		last_name:Joi.string(),
+		personal_phone:Joi.string(),
+		password:Joi.string()
+		})
+	const newUser = {
+		email: req.body.email,
+		first_name: req.body.first_name,
+		last_name: req.body.last_name,
+		personal_phone: req.body.personal_phone,
+		password: req.body.password
+	}
+	const {error, value} = Joi.validate(newUser, schema);
 	if (error === null) {
 		var updates = _.pick(req.body, [ 'email', 'first_name','last_name', 'personal_phone']);
 		var pickPASS = _.pick(req.body, ['password']);
