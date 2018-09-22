@@ -5,7 +5,7 @@
     ],
     "recurseDepth": 7,
     "source": {
-        "include":["."],
+        "include":[".", "README.md"],
         "exclude":["node_modules", "html-pt2"],
         "includePattern": ".+\\.js(doc|x)?$",
         "excludePattern": "(^|\\/|\\\\)_"

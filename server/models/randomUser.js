@@ -27,6 +27,12 @@ var {Login} = require('./login.js');
 const axios = require('axios');
 var i = 0;
 
+/**
+ * @function funcAS
+ * @async
+ * @param {object} user All the information of an especif user.
+ */
+
 async function funcAS(user) {
 	try {
 		const response = await axios({
@@ -34,9 +40,9 @@ async function funcAS(user) {
 			url: 'http://localhost:3000/users',
 			data: user
 		});
-		console.log("OK!!!ENVIADOOOO")
+		console.log("Sent successfully one more random user!")
 
-		//console.log(response);
+
 	} catch (error) {
 		console.error(error);
 	}
@@ -45,35 +51,38 @@ async function funcAS(user) {
 while (i<85) {
     i ++
 
-    /** @type {number}
-     * The creation of random CPF is used as the password of the fake users.
+    /** @namespace {typedPASS} String The creation of random CPF is used as the password of the fake users.
      */
     var typedPASS = leite.pessoa.rg()
     
-    /** @type {string} */
+    /** @namespace {emailFILL} String */
     var emailFILL = leite.pessoa.email()
 
-    /**@type {number} 
-     * The creation of random age is used as the personal number of the fake users.
+    /**@namespace {numberFILL} Number The creation of random age is used as the personal number of the fake users.
     */
     var numberFILL = leite.pessoa.idade({ min: 800000000, max: 999999999 });
 
-    /** @type {string} */
+    /**@namespace {nameFILL} String */
     var nameFILL = leite.pessoa.nome()
 
-    /** @type {string} */
+    /** @namespace {surnameFILL} String */
     var surnameFILL = leite.pessoa.sobrenome();
 
-    /** @type {string} */
+    /** @namespace {phoneFILL} String */
     var phoneFILL = numberFILL.toString();
 
-    /** @type {string} */
+    /** @namespace {hash} String */
     var hash = bcrypt.hashSync(typedPASS);
 
 
-    /** @type {object}
-     * Represents a fake user
-     */
+   /**
+    * @namespace {leiteUser} Object Cotains all info of an user.
+    * @property {String} email 
+    * @property {String} first_name 
+    * @property {String} last_name 
+    * @property {String} personal_phone 
+    * @property {String} password 
+    */
     var leiteUser = new Login({
         email: emailFILL,
         first_name: nameFILL,
