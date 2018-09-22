@@ -1,3 +1,9 @@
+/**
+ * @fileOverview This file is a Jest test and it should respond the POST method
+ * @author <a href="https://www.linkedin.com/in/andredevay/"> André Devay </a>
+ * @version 1.0
+ */
+
 const request = require('supertest');
 const app = require('../server/main');
 

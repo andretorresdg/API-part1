@@ -1,5 +1,5 @@
 /**
- * @fileOverview The creation of a database in mongoDB via mongoose
+ * @fileOverview The creation and connection to a database in mongoDB via mongoose
  * @author <a href="https://www.linkedin.com/in/andredevay/"> André Devay </a>
  * @version 1.0
  */

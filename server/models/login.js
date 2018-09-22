@@ -1,14 +1,13 @@
 /**
  * @fileOverview The detailing of the variable "Login"
- * @author <a href="mailto:andretorresdg@usp.br">André Devay</a>
+ * @author <a href="https://www.linkedin.com/in/andredevay/"> André Devay </a>
  * @version 1.0
  */
 
 var mongoose = require('mongoose');
 const Joi = require('joi');
 
-/**@type {object}
- * This is the mongoose model for the login.
+/**@namespace {Login} Object This is the mongoose model for the login.
  */
 
 var Login = mongoose.model('Login', {

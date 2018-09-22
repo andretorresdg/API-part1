@@ -1,7 +1,11 @@
+/**
+ * @fileOverview Automatically clear mock calls and instances between every test and set node for the test environment.
+ * @author <a href="https://www.linkedin.com/in/andredevay/"> André Devay </a>
+ * @version 1.0
+ */
+
 module.exports = {
-    // Automatically clear mock calls and instances between every test
     clearMocks: true,
-    // The test environment that will be used for testing
     testEnvironment: "node"
    };
    

@@ -1,6 +1,6 @@
 /**
  * @fileOverview A script that populates the database with 85 fake users.
- * @author <a href="mailto:andretorresdg@usp.br">André Devay</a>
+ * @author <a href="https://www.linkedin.com/in/andredevay/"> André Devay </a>
  * @version 1.0
  */
 
