@@ -5,6 +5,6 @@
  */
 
 module.exports = {
-  clearMocks: true,
-  testEnvironment: 'node',
+	clearMocks: true,
+	testEnvironment: 'node',
 };

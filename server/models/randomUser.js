@@ -36,46 +36,46 @@ let i = 0;
  */
 
 async function funcAS(user) {
-  try {
-    const response = await axios({
-      method: 'post',
-      url: 'http://localhost:3000/users',
-      data: user,
-    });
-    console.log('Sent successfully one more random user!');
-  } catch (error) {
-    console.error(error);
-  }
+	try {
+		const response = await axios({
+			method: 'post',
+			url: 'http://localhost:3000/users',
+			data: user,
+		});
+		console.log('Sent successfully one more random user!');
+	} catch (error) {
+		console.error(error);
+	}
 }
 
 while (i < 85) {
-  i++;
+	i++;
 
-  /** @namespace {typedPASS} String The creation of random CPF is used as the password of the fake users.
+	/** @namespace {typedPASS} String The creation of random CPF is used as the password of the fake users.
      */
-  const typedPASS = leite.pessoa.rg();
+	const typedPASS = leite.pessoa.rg();
 
-  /** @namespace {emailFILL} String */
-  const emailFILL = leite.pessoa.email();
+	/** @namespace {emailFILL} String */
+	const emailFILL = leite.pessoa.email();
 
-  /** @namespace {numberFILL} Number The creation of random age is used as the personal number of the fake users.
+	/** @namespace {numberFILL} Number The creation of random age is used as the personal number of the fake users.
     */
-  const numberFILL = leite.pessoa.idade({ min: 800000000, max: 999999999 });
+	const numberFILL = leite.pessoa.idade({ min: 800000000, max: 999999999 });
 
-  /** @namespace {nameFILL} String */
-  const nameFILL = leite.pessoa.nome();
+	/** @namespace {nameFILL} String */
+	const nameFILL = leite.pessoa.nome();
 
-  /** @namespace {surnameFILL} String */
-  const surnameFILL = leite.pessoa.sobrenome();
+	/** @namespace {surnameFILL} String */
+	const surnameFILL = leite.pessoa.sobrenome();
 
-  /** @namespace {phoneFILL} String */
-  const phoneFILL = numberFILL.toString();
+	/** @namespace {phoneFILL} String */
+	const phoneFILL = numberFILL.toString();
 
-  /** @namespace {hash} String */
-  const hash = bcrypt.hashSync(typedPASS);
+	/** @namespace {hash} String */
+	const hash = bcrypt.hashSync(typedPASS);
 
 
-  /**
+	/**
     * @namespace {leiteUser} Object Cotains all info of an user.
     * @property {String} email
     * @property {String} first_name
@@ -83,14 +83,14 @@ while (i < 85) {
     * @property {String} personal_phone
     * @property {String} password
     */
-  const leiteUser = new Login({
-    email: emailFILL,
-    first_name: nameFILL,
-    last_name: surnameFILL,
-    personal_phone: phoneFILL,
-    password: hash,
-  });
+	const leiteUser = new Login({
+		email: emailFILL,
+		first_name: nameFILL,
+		last_name: surnameFILL,
+		personal_phone: phoneFILL,
+		password: hash,
+	});
 
-  console.log(leiteUser);
-  funcAS(leiteUser);
+	console.log(leiteUser);
+	funcAS(leiteUser);
 }

@@ -11,26 +11,26 @@ const Joi = require('joi');
  */
 
 const Login = mongoose.model('Login', {
-  email: {
-    type: String,
-    required: true,
-    minlength: 1,
-    trim: true,
-  },
-  first_name: {
-    type: String,
-  },
-  last_name: {
-    type: String,
-  },
-  personal_phone: {
-    type: String,
-  },
-  password: {
-    type: String,
-    required: true,
-    trim: true,
-  },
+	email: {
+		type: String,
+		required: true,
+		minlength: 1,
+		trim: true,
+	},
+	first_name: {
+		type: String,
+	},
+	last_name: {
+		type: String,
+	},
+	personal_phone: {
+		type: String,
+	},
+	password: {
+		type: String,
+		required: true,
+		trim: true,
+	},
 });
 
 module.exports = { Login };
