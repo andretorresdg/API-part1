@@ -4,9 +4,9 @@
  * @version 1.0
  */
 
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/TesteLogin', { useNewUrlParser: true });
 
-module.exports = {mongoose};
+module.exports = { mongoose };
