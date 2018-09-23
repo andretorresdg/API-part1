@@ -1,12 +1,12 @@
 /**
- * @fileOverview The creation and connection to a database in mongoDB via mongoose
+ * @fileOverview The creation of a database in mongoDB via mongoose
  * @author <a href="https://www.linkedin.com/in/andredevay/"> André Devay </a>
  * @version 1.0
  */
 
-const mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/TesteLogin', { useNewUrlParser: true });
 
-module.exports = { mongoose };
+module.exports = {mongoose};
