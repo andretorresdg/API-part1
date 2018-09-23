@@ -24,7 +24,7 @@ Feel free to see the source code [here](https://github.com/andretorresdg/API-par
 
 >1) On GitHub, navigate to the [main page](https://github.com/andretorresdg/API-parte1.git) of the repository.
 
->2) Clone or download buttonUnder the repository name, click Clone or download.
+>2) Click ‘Clone or Download’ button, under the repository name.
 
 >3) Clone URL buttonIn the Clone with HTTPs section, click  to copy the clone URL for the repository ( [this web URL](https://github.com/andretorresdg/API-parte1.git) ).
 
@@ -59,19 +59,18 @@ And these packages:
 - [Axios](https://www.npmjs.com/package/axios)
 - [JSDoc](https://www.npmjs.com/package/jsdoc)
 - [Supertest](https://www.npmjs.com/package/supertest)
+- [Jest](https://www.npmjs.com/package/jest)
 
 
 > **Tips**
 
 - Install the [Nodemon](https://nodemon.io/) to program more easily
 - Use the [Postman](https://www.getpostman.com/) to test 
-- Use always the last stable version of these programs and packages
+- always use the last stable version of these programs and packages
 
 ---
 
 ## Installing
-
-- You will need to follow these steps for each library that you install
 
 > First, make sure you have already downloaded my API (if you do not, click [here](#initiating) and follow those steps before continuing the installing procedure)
 
@@ -86,10 +85,10 @@ $ cd D:\Users\Admin\Desktop\API-part1
 > Now, install all the packages with the followig command:
 
 ```shell
-$ npm install --save
+$ npm install 
 ```
 
-> If you want to install the nodemon, you should use another command:
+> If you want to install the nodemon, you should use this command:
 
 ```shell
 $ npm install -g nodemon
@@ -107,14 +106,14 @@ $ npm install -g nodemon
 > To run the program, type this in the  command prompt: 
 
 ```shell
-$ node main.js
+$ node app-jest.js
 ```
-PS.: Make sure that the path to the "main.js" is correct. 
+PS.: Make sure that the path to the "app-jest.js" is correct. 
 
 #### Commands
 > These are the steps my API performs. If you wish, feel free to execute each.
 
-PS.: I highly recommend [Postman](https://www.getpostman.com/)  to use the API.
+PS.: I highly recommend [Postman](https://www.getpostman.com/)  to test the API.
 
 ##### GET​ /users
 - This command returns an array of JSON with all the users in the database.
@@ -131,15 +130,15 @@ PS.: I highly recommend [Postman](https://www.getpostman.com/)  to use the API.
 
 > The API starts without any type of user. So, if you want that your database initiate with some random users, run the "randomUser.js" once (it will generate 85 random users).
 
-1) Run the "main.js"
+1) Run the "app-jest.js"
 ```shell
 $ node main.js
 ```
-2) Open another window of the command prompt, and run this code below:
+2) Open another window of the command prompt, and run this command:
 ```shell
-$ node randomUser.js
+$ node ./server/models/randomUser.js
 ```
-PS.: Make sure that the "main.js" is running simultaneously.
+PS.: Make sure that the "app-jest.js" is running.
 
 ---
 

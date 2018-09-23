@@ -4,7 +4,7 @@
  * @version 1.0
  */
 
-const app = require('./server/main.js');
+const app = require('./server/app.js');
 
 app.listen(3000, () => {
  console.log('Started on port 3000');

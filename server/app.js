@@ -14,7 +14,7 @@ var {mongoose} = require('./models/mongoose');
 var {ObjectID} = require('mongodb');
 var bodyParser = require('body-parser');
 var app = express();
-var {Login} = require('./models/login.js');
+var {Login} = require('./models/login');
 var Joi = require('joi')
 
 
